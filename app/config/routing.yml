@@ -1,0 +1,7 @@
+demo_shop:
+    resource: "@DemoShopBundle/Resources/config/routing.xml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
