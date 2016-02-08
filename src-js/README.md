@@ -12,6 +12,6 @@
 - contains all javascript libraries used in this demo_shop application
 
 ## lib/
-- contains the main project jquery.spa.js
+- contains jquery.spa.js
 - contains implementation of the bachelor thesis
 - contains also potentially additional libraries
