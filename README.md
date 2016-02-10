@@ -1,72 +1,79 @@
 demo_shop
 =========
 
-Small demo shop bundle which will offer an master template with all views and also a RESTful API for
-CRUD operation on products.
+Small demo shop bundle with Symfony 2.8 and jQuery, which provides a RESTful shop API and a Single Page Application later on.
 
 # What is this good for?
 
-Well the main priority of this package is showing the functionality of the bachelor thesis of me, which is 
-in detail a jQuery plugin for enabling application to easy use Single Page Application functionality.
-In more detail, this small project have to come with an RESTful API so that the jQuery plugin is able
-to use it as a general backend API.
+Well the main priority of this project is showing the functionality of my bachelor thesis, which is 
+in detail a jQuery plugin which provides simple SPA functionality, so that its easy to SPAlify your application.
+
+This project shows the usage of the jquery.spa.js plugin with providing an RESTful API and delivering all templates in 
+a single template, so all resources are loaded during the first request to this application.
 
 # Whats inside?
 
-The backend will provide a RESTful API for CRUD operations and also a master template with all views.
+The backend will provide a RESTful API for CRUD operations and also a templates which contains already all needed HTML.
 So this backend will offering the following to the frontend:
 
-- Master template view with all shop related views inside
+- a template with all needed HTML
 - RESTful controllers
 - a CRUD service to edit products
 - Needed entities managed by doctrine services
+- JS files which will use the functionality of jquery.spa.js
 - Maybe a database as a storage, not yet decided
 
-It also enables javascript at the client side which includes:
+This project rely on the following dependencies for the client side:
 
-- jQuery and jquery.spa.js as dependencies
-- several js sources to enable the functionality of jquery.spa.js
+- jQuery
+- jquery.spa.js
 
-# Where to find my SPA plugin for jQuery
+# Where to find the SPA plugin for jQuery
 
 For checking out my SPA plugin for jQuery, you can check my profile and take a look at the jquery-spa repository.
-You can also simply check the composer.json file to see the dependency.
 It is available on https://github.com/cwasser/jquery-spa 
 
 # How to contribute?
 
-Since this is part of my bachelor thesis, there is no chance to really contribute to this project until i finish the first version
-and get my graduation.
-Please be so kind and also do not report issues or merge request until i will release the first version.
+This is the demonstration part of my bachelor thesis, so before getting my graduation I will not take a look on
+reported issues or Pull/Merge requests.
+After getting my graduation I will update the README as well as the documentation. Then I will have an eye on the
+reported issues and also on Pull/Merge requests. Then also everyone who wants to contribute should feel free to do it.
 
-After getting the graduation it will be possible to get accepted merge request and i will have an eye on the reported 
-issues. That means everyone is then free to contribute to this project.
+# How to install
+First clone this repository. After doing that simply run
+```
+composer install && npm install
+```
 
 # Directory index
 Description of the directory folders. 
+
 ## app/
-Application configuration and also standard Symfony configuration
+Application related configuration
+
+## app/Resources/public/js/
+Javascript source files for the demo web shop
+
+## app/Resources/public/css/
+CSS sources for the demo web shop
 
 ## src/DemoShopBundle/
-
-Source folder for the demo_shop bundle, which includes the whole backend.
-In detail the sub folders are
-- Contoller/ -> RESTful controllers
-- Tests/ -> application tests
+Source folder for the demo_shop bundle, which contains the API and Domain Logic.
+In detail the sub folders contain:
+- Controller/ -> RESTful controller + IndexController
+- Tests/ -> application related unit tests
 - Services/ -> all bundle related services
-- Entity/ -> the main data entities like Product
-- Resources/ -> all resources like service and route configuration and also the views
-
-## src-js/
-
-All javascript sources and libraries.
-For detailed information see the src-js/README.md.
+- Entity/ -> DTO's and Entities
+- Resources/ -> bundle specific configuration (e.g. services and routes)
 
 ## vendor/
+All vendor libraries and dependencies
 
-All dependencies and vendor libraries, such as Symfony, doctrine and so on.
+## node_modules/
+All javascript third party libraries which are loaded by NPM (package.json). 
+jQuery and also jquery.spa.js live in there.
 
 ## web/
-
 All public files accessible via the web. This includes compiled and minimized js sources as
 well as the rendered templates.

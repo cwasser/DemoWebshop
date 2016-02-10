@@ -2,6 +2,7 @@
     "name": "cwasser/demo_shop",
     "description": "Demo shop application for demonstrate the jQuery SPA plugin",
     "license": "proprietary",
+    "version": "0.0.1",
     "type": "project",
     "autoload": {
         "psr-4": {

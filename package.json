@@ -1,0 +1,41 @@
+{
+  "name": "demo_shop",
+  "version": "0.0.1",
+  "title": "Demo web shop for the jquery.spa.js plugin",
+  "description": "Demo web shop",
+  "main": "./web/js/prod.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwasser/DemoWebshop.git"
+  },
+  "author": {
+    "name": "Christian Wasser",
+    "email": "admin@chwasser.de",
+    "url": "https://github.com/cwasser",
+    "role": "Maintainer"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cwasser/DemoWebshop/issues"
+  },
+  "homepage": "https://github.com/cwasser/DemoWebshop#readme",
+  "dependencies": {
+    "jquery": "^2.2.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.2",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "map-stream": "0.0.6"
+  }
+}

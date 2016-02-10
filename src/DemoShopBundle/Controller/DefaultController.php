@@ -8,6 +8,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('DemoShopBundle:Default:index.html.twig');
+        $aTest = ["test" => "1", "testN" => "n"];
+        return $this->render('DemoShopBundle:Default:index.html.twig',["aTest" => $aTest]);
     }
 }
