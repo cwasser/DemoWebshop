@@ -1,0 +1,3 @@
+cwasser_book_shop_homepage:
+    path:     /
+    defaults: { _controller: CwasserBookShopBundle:Default:index }

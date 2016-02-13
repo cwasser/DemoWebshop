@@ -1,4 +1,6 @@
-demo_shop:
-    resource: "@DemoShopBundle/Resources/config/routing.xml"
+cwasser_book_shop:
+    resource: "@CwasserBookShopBundle/Resources/config/routing.yml"
     prefix:   /
+
+
 

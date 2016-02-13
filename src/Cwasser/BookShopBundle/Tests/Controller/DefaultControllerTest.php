@@ -1,6 +1,6 @@
 <?php
 
-namespace DemoShopBundle\Tests\Controller;
+namespace Cwasser\BookShopBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
