@@ -1,6 +1,10 @@
-cwasser_book_shop:
-    resource: "@CwasserBookShopBundle/Resources/config/routing.yml"
-    prefix:   /
+#Notice: to switch later on to a new version of the api simply switch the resource e.g. "...config/api-routing-v2.yml"
+#Or enable the FOS\RestBundle v2.0 and do the regarding changes, then versioning will work automatically
+cwasser_book_shop_api:
+    resource: "@CwasserBookShopBundle/Resources/config/api-routing-v1.yml"
+    prefix:   /api
 
-
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
 

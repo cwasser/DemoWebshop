@@ -1,0 +1,4 @@
+cwasser_book_shop_api_v1_books:
+  type: rest
+  resource: "@CwasserBookShopBundle/Controller/BookController.php"
+  prefix: /v1

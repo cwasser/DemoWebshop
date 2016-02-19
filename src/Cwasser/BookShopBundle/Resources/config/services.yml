@@ -1,4 +1,17 @@
+parameters:
+  cwasser.book_shop_bundle.v1.entity.book.class: Cwasser\BookShopBundle\V1\Entity\Book
+
 services:
 #    cwasser_book_shop.example:
 #        class: Cwasser\BookShopBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+
+####################### V1 #################################
+    cwasser.book_shop_bundle.v1.service.book_manager:
+        class: Cwasser\BookShopBundle\V1\Service\BookManager
+        arguments:
+          em: "@doctrine.orm.entity_manager"
+          entityClass: "%cwasser.book_shop_bundle.v1.entity.book.class%"
+          formFactory: "@form.factory"
+
+

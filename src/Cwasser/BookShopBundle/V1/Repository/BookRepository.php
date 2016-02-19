@@ -1,6 +1,6 @@
 <?php
 
-namespace Cwasser\BookShopBundle\Repository;
+namespace Cwasser\BookShopBundle\V1\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

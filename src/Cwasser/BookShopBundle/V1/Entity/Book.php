@@ -1,6 +1,6 @@
 <?php
 
-namespace Cwasser\BookShopBundle\Entity;
+namespace Cwasser\BookShopBundle\V1\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,9 +8,9 @@ use Doctrine\ORM\Mapping as ORM;
  * Book
  *
  * @ORM\Table(name="book")
- * @ORM\Entity(repositoryClass="Cwasser\BookShopBundle\Repository\BookRepository")
+ * @ORM\Entity(repositoryClass="Cwasser\BookShopBundle\V1\Repository\BookRepository")
  */
-class Book
+class Book implements BookInterface
 {
     /**
      * @var int
@@ -72,9 +72,7 @@ class Book
 
 
     /**
-     * Get id
-     *
-     * @return integer 
+     * {@inheritdoc}
      */
     public function getId()
     {
@@ -82,10 +80,7 @@ class Book
     }
 
     /**
-     * Set title
-     *
-     * @param string $title
-     * @return Book
+     * {@inheritdoc}
      */
     public function setTitle($title)
     {
@@ -95,9 +90,7 @@ class Book
     }
 
     /**
-     * Get title
-     *
-     * @return string 
+     * {@inheritdoc}
      */
     public function getTitle()
     {
@@ -105,10 +98,7 @@ class Book
     }
 
     /**
-     * Set description
-     *
-     * @param string $description
-     * @return Book
+     * {@inheritdoc}
      */
     public function setDescription($description)
     {
@@ -118,9 +108,7 @@ class Book
     }
 
     /**
-     * Get description
-     *
-     * @return string 
+     * {@inheritdoc}
      */
     public function getDescription()
     {
@@ -128,10 +116,7 @@ class Book
     }
 
     /**
-     * Set author
-     *
-     * @param string $author
-     * @return Book
+     * {@inheritdoc}
      */
     public function setAuthor($author)
     {
@@ -141,9 +126,7 @@ class Book
     }
 
     /**
-     * Get author
-     *
-     * @return string 
+     * {@inheritdoc}
      */
     public function getAuthor()
     {
@@ -151,10 +134,7 @@ class Book
     }
 
     /**
-     * Set publisher
-     *
-     * @param string $publisher
-     * @return Book
+     * {@inheritdoc}
      */
     public function setPublisher($publisher)
     {
@@ -164,9 +144,7 @@ class Book
     }
 
     /**
-     * Get publisher
-     *
-     * @return string 
+     * {@inheritdoc}
      */
     public function getPublisher()
     {
@@ -174,10 +152,7 @@ class Book
     }
 
     /**
-     * Set isbn
-     *
-     * @param integer $isbn
-     * @return Book
+     * {@inheritdoc}
      */
     public function setIsbn($isbn)
     {
@@ -187,9 +162,7 @@ class Book
     }
 
     /**
-     * Get isbn
-     *
-     * @return integer 
+     * {@inheritdoc}
      */
     public function getIsbn()
     {
@@ -197,10 +170,7 @@ class Book
     }
 
     /**
-     * Set language
-     *
-     * @param string $language
-     * @return Book
+     * {@inheritdoc}
      */
     public function setLanguage($language)
     {
@@ -210,9 +180,7 @@ class Book
     }
 
     /**
-     * Get language
-     *
-     * @return string 
+     * {@inheritdoc}
      */
     public function getLanguage()
     {
@@ -220,10 +188,7 @@ class Book
     }
 
     /**
-     * Set price
-     *
-     * @param float $price
-     * @return Book
+     * {@inheritdoc}
      */
     public function setPrice($price)
     {
@@ -233,9 +198,7 @@ class Book
     }
 
     /**
-     * Get price
-     *
-     * @return float 
+     * {@inheritdoc}
      */
     public function getPrice()
     {

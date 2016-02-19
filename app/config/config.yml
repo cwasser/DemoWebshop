@@ -59,6 +59,13 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        mappings:
+          CwasserBookShopBundleV1:
+            type: annotation
+            is_bundle: false
+            dir: %kernel.root_dir%/../src/Cwasser/BookShopBundle/V1/Entity
+            prefix: Cwasser\BookShopBundle\V1\Entity
+            alias: CwasserBookShopBundleV1Entity
 
 
 #Assetic Configuration
@@ -81,5 +88,21 @@ fos_rest:
 
     view:
       view_response_listener: 'force'
+      formats:
+        xml: true
+        json: true
+      templating_formats:
+        html: true
+      force_redirects:
+        html: true
+      failed_validation: HTTP_BAD_REQUEST
+      default_engine: twig
+      mime_types:
+        json: ['application/json', 'application/json;version=1.0']
+        xml: ['text/xml', 'text/xml;version=1.0']
+    format_listener:
+      rules:
+        - { path: ^/api, priorities: [ json, xml ], fallback_format: json, prefer_extension: true }
     routing_loader:
       default_format: json
+    disable_csrf_role: ROLE_API
