@@ -1,7 +1,13 @@
 demo_shop
 =========
 
-Small demo shop bundle with Symfony 2.8 and jQuery, which provides a RESTful shop API and a Single Page Application later on.
+Small demo shop bundle with 
+- Symfony 2.8
+- FOS/RestBundle
+- Nelmio/ApiDocBundle
+- jQuery
+which provides a RESTful book shop API and a Single Page Application later on.
+The demo shop is currently build for providing REST operations for an book entity.
 
 # What is this good for?
 
@@ -13,15 +19,12 @@ a single template, so all resources are loaded during the first request to this 
 
 # Whats inside?
 
-The backend will provide a RESTful API for CRUD operations and also a templates which contains already all needed HTML.
+The backend will provide a RESTful API for CRUD operations for books.
 So this backend will offering the following to the frontend:
 
-- a template with all needed HTML
-- RESTful controllers
-- a CRUD service to edit products
+- RESTful controller
+- a CRUD service for books
 - Needed entities managed by doctrine services
-- JS files which will use the functionality of jquery.spa.js
-- Maybe a database as a storage, not yet decided
 
 This project rely on the following dependencies for the client side:
 
@@ -40,14 +43,29 @@ reported issues or Pull/Merge requests.
 After getting my graduation I will update the README as well as the documentation. Then I will have an eye on the
 reported issues and also on Pull/Merge requests. Then also everyone who wants to contribute should feel free to do it.
 
-# How to install
+# Installation instructions
 First clone this repository. After doing that simply run
 ```
 composer install && npm install
 ```
 
+Also you have to configure the app/config/parameters.yml to setup your database connection.
+After editing the config, you might run
+```
+app/console doctrine:database:create
+app/console doctrine:schema:validate
+app/console doctrine:schema:update --force
+```
+
+For building the client side assets (JS, templates and CSS), run the following:
+```
+npm install
+gulp
+```
+
 # Directory index
-Description of the directory folders. 
+Description of the directory folders.
+Checkout the project dependencies in ``package.json`` and in ``composer.json``
 
 ## app/
 Application related configuration
@@ -58,14 +76,18 @@ Javascript source files for the demo web shop
 ## app/Resources/public/css/
 CSS sources for the demo web shop
 
-## src/DemoShopBundle/
+## src/BookShopBundle/
 Source folder for the demo_shop bundle, which contains the API and Domain Logic.
 In detail the sub folders contain:
-- Controller/ -> RESTful controller + IndexController
-- Tests/ -> application related unit tests
-- Services/ -> all bundle related services
-- Entity/ -> DTO's and Entities
+- Controller/ -> RESTful controller + other Controller
+- DependencyInjection/ -> DIC related stuff
 - Resources/ -> bundle specific configuration (e.g. services and routes)
+- V1/ -> all domain logic for version 1 of the book API
+-- V1/Entity/ -> Doctrine managed entities for V1 and also the interfaces
+-- V1/Form/ -> Form types for V1 entities
+-- V1/Repository/ -> Doctrine repositories for v1's doctrine managed entities
+-- V1/Service/ -> All services for V1
+-- V1/Tests/ -> All units test for V1
 
 ## vendor/
 All vendor libraries and dependencies

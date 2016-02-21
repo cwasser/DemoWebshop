@@ -56,6 +56,14 @@ interface BookManagerInterface
     public function patch(BookInterface $book, array $parameters);
 
     /**
+     * Delete the given book
+     *
+     * @param BookInterface $book
+     * @return void
+     */
+    public function delete(BookInterface $book);
+
+    /**
      * Return the supported class
      *
      * @return string

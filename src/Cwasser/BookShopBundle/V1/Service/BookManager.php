@@ -93,6 +93,24 @@ class BookManager implements BookManagerInterface
     /**
      * {@inheritdoc}
      */
+    public function delete(BookInterface $book){
+        $bookId = $book->getId();
+        try{
+            $this->em->remove($book);
+            $this->em->flush();
+            return;
+        }catch(\Exception $e){
+            throw new \Exception(
+                "Unable to delete the given resource with id ".$bookId,
+                500,
+                $e
+            );
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function supportsClass()
     {
         return "$this->entityClass";
