@@ -42,11 +42,18 @@ class CartController extends Controller
         $bookManager = $this->container->get(BookManager::DIC_NAME);
         $books = array();
         foreach($params['book_ids'] as $bookId){
-            $books[] = $bookManager->get($bookId);
+            $book = $bookManager->get($bookId);
+            if(!$book){
+                return new JsonResponse(
+                    array("message" => "At least one of the given resource IDs does not exists, please your selected books"),
+                    JsonResponse::HTTP_NOT_FOUND
+                );
+            }
+            $books[] = $book;
+
         }
         return new JsonResponse(
-            array("message" => "Books are successfully ordered, you will receive an
-            mail with the order details soon"),
+            array("message" => "Books are successfully ordered, you will receive an mail with the order details soon"),
             JsonResponse::HTTP_OK
         );
     }
