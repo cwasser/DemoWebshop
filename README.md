@@ -1,11 +1,14 @@
 demo_shop
 =========
 
-Small demo shop bundle with 
+Small demo shop bundle with
+
 - Symfony 2.8
 - FOS/RestBundle
 - Nelmio/ApiDocBundle
 - jQuery
+- jQuery SPA plugin
+
 which provides a RESTful book shop API and a Single Page Application later on.
 The demo shop is currently build for providing REST operations for an book entity.
 
@@ -76,7 +79,7 @@ Javascript source files for the demo web shop
 ## app/Resources/public/css/
 CSS sources for the demo web shop
 
-## src/BookShopBundle/
+## src/Cwasser/BookShopBundle/
 Source folder for the demo_shop bundle, which contains the API and Domain Logic.
 In detail the sub folders contain:
 - Controller/ -> RESTful controller + other Controller

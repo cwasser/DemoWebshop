@@ -2,8 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Cwasser book shop SPA{% endblock %}</title>
+        {% block import_stylesheets %}{% endblock %}
+
+        <script type="text/javascript" src="{{ asset('js/prod.js') }}"></script>
+        {% block import_javascripts %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
@@ -11,3 +14,4 @@
         {% block javascripts %}{% endblock %}
     </body>
 </html>
+

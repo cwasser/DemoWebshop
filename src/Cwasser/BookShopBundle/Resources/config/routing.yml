@@ -1,0 +1,4 @@
+cwasser_book_shop_index:
+  path:   /
+  defaults: { _controller: CwasserBookShopBundle:BookShop:index }
+  methods: [GET]

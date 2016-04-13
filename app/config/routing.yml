@@ -8,3 +8,7 @@ NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
     prefix:   /api/doc
 
+cwasser_book_shop:
+    resource: "@CwasserBookShopBundle/Resources/config/routing.yml"
+    prefix:   /
+
