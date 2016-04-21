@@ -1,6 +1,6 @@
 {
   "name": "demo_shop",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "title": "Demo web shop for the jquery.spa.js plugin",
   "description": "Demo web shop",
   "main": "./web/js/prod.js",

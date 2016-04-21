@@ -2,3 +2,23 @@ cwasser_book_shop_index:
   path:   /
   defaults: { _controller: CwasserBookShopBundle:BookShop:index }
   methods: [GET]
+
+cwasser_book_shop_index1:
+  path:   /{first_route}
+  defaults: { _controller: CwasserBookShopBundle:BookShop:index }
+  methods: [GET]
+
+cwasser_book_shop_index2:
+  path:   /{first_route}/{second_route}
+  defaults: { _controller: CwasserBookShopBundle:BookShop:index }
+  methods: [GET]
+
+cwasser_book_shop_index3:
+  path:   /{first_route}/{second_route}/{third_route}
+  defaults: { _controller: CwasserBookShopBundle:BookShop:index }
+  methods: [GET]
+
+cwasser_book_shop_index4:
+  path:   /{first_route}/{second_route}/{third_route}/{fourth_route}
+  defaults: { _controller: CwasserBookShopBundle:BookShop:index }
+  methods: [GET]
