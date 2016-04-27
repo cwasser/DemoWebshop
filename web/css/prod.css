@@ -1,0 +1,323 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+    background-color: #e6e6e6;
+    min-height: 100%;
+    position: relative;
+    margin-bottom: -25px;
+}
+
+#wrapper:after {
+    content: "";
+    display: block;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #a4a4a4;
+    text-align: center;
+}
+
+.header h1 {
+    margin-top: 0;
+}
+
+.content {
+    min-height: 600px;
+    height: 750px;
+    position: relative;
+    display: flex;
+}
+
+.content > .overview {
+    position: relative;
+    float: left;
+    flex: 1;
+}
+
+.footer {
+    width: 100%;
+    height: 15px;
+    font-size: x-small;
+    padding: 5px;
+    clear: both;
+    background-color: #a4a4a4;
+    position: relative;
+}
+
+/******************** CART VIEW ***********************************/
+.content > .cart {
+    flex: 1;
+    float: right;
+    padding: 5px;
+    margin-left: 5px;
+    max-width: 250px;
+    text-align: center;
+    border-left: 5px #a4a4a4 solid;
+    position: relative;
+}
+
+.cart .cartBooks {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 50px;
+    margin: 3px;
+}
+
+.cartBook {
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+    height: 50px;
+    background-color: white;
+    border-top: 2px #a6a6a6 solid;
+    border-bottom: 2px #a6a6a6 solid;
+    overflow: hidden;
+    display: flex;
+}
+
+.cartBook__count {
+    padding: 15px;
+    min-width: 30px;
+}
+
+.cartBook__desc {
+    min-width: 115px;
+    width: 150px;
+    border-left: 2px #d0d0d0 solid;
+    border-right: 2px #d0d0d0 solid;
+}
+
+.cartBook__overlay {
+    opacity: 0.7;
+    filter: alpha(opacity=20);
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding-top: 400px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.cartBook__desc__title {
+    height: 17px;
+    min-height: 17px;
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cartBook__desc__desc {
+    clear: both;
+    padding-left: 3px;
+    text-align: left;
+    font-size: xx-small;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: -5px;
+    text-overflow: ellipsis;
+}
+
+.cartBook__button__delete {
+    font-size: x-small;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    border: 1px #a4a4a4 solid;
+    transition-duration: 0.4s;
+    float: left;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.cartBook__button__delete:hover{
+    background-color: #a4a4a4;
+    color: white;
+    border-radius: 5px;
+    border: 1px #a4a4a4 solid;
+}
+
+.cartBook__price {
+    padding: 15px;
+    min-width: 30px;
+}
+
+/********************* BOOK OVERVIEW ******************************/
+
+.book {
+    width: 200px;
+    height: 250px;
+    background-color: white;
+    position: relative;
+    float: left;
+    margin: 10px;
+    padding: 5px;
+    -webkit-box-shadow: 0 0 10px 0 #a4a4a4;
+    -moz-box-shadow: 0 0 10px 0 #a4a4a4;
+    box-shadow: 0 0 10px 0 #a4a4a4;
+}
+
+.book__cover {
+    width: 100%;
+    height: 90px;
+    background-color: #a4a4a4;
+    text-align: center;
+}
+
+.book__title {
+    clear: both;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.book__price {
+    width: 100%;
+    text-align: right;
+    font-weight: bolder;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 15px;
+}
+
+.book__desc {
+    padding: 5px;
+    font-size: smaller;
+    word-break: keep-all;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book__menu {
+    float: right;
+    height: 30px;
+}
+
+.book__button {
+    margin-left: 2px;
+    font-size: x-small;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    border: 1px #a4a4a4 solid;
+    transition-duration: 0.4s;
+}
+
+.book__button:hover{
+    background-color: #a4a4a4;
+    color: white;
+    border-radius: 5px;
+    border: 1px #a4a4a4 solid;
+}
+
+/********************** BOOK DETAIL VIEW **************************/
+
+.book-details {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    margin: 10px;
+    -webkit-box-shadow: 0 0 10px 0 #a4a4a4;
+    -moz-box-shadow: 0 0 10px 0 #a4a4a4;
+    box-shadow: 0 0 10px 0 #a4a4a4;
+}
+
+.book-details__menu {
+    padding: 0;
+    height: 40px;
+    border-bottom: 4px #e6e6e6 solid;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+}
+
+.book-details__cover {
+    margin: 2px;
+    padding: 10px;
+    float: left;
+    background-color: #a4a4a4;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+}
+
+.book-details__price {
+    float: right;
+    font-size: 2em;
+    margin: 2px;
+    padding: 100px;
+    height: 220px;
+    width: 120px;
+    text-align: center;
+}
+
+.book-details__information, .book-details__description{
+    clear: both;
+    margin: 20px 2px 2px 2px;
+    padding: 2px 2px 2px 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -ms-word-break: keep-all;
+    word-break: keep-all;
+}
+
+.book-details__information__key {
+    width: 130px;
+    padding: 5px;
+    float: left;
+}
+
+.book-details__information__value {
+    width: 120px;
+    float:left;
+    padding: 5px;
+}
+
+.book-details__title {
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2.1em;
+    margin: 0 0 0 -70px;
+}
+
+.book-details__button {
+    float: left;
+    margin: 8px;
+    font-weight: bolder;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    border: 1px #a4a4a4 solid;
+    transition-duration: 0.4s;
+}
+
+.book-details__button:hover {
+    background-color: #a4a4a4;
+    color: white;
+    border-radius: 5px;
+    border: 1px #a4a4a4 solid;
+}
+
+/*********************** BOOK FORM *********************************/

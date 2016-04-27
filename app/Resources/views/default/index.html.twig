@@ -1,7 +1,24 @@
 {% extends 'base.html.twig' %}
 
+{% block import_stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/prod.css') }}">
+{% endblock %}
+
 {% block body %}
-    <div id="content">
-        Test
+    <div id="wrapper">
+        <div class="header">
+            <h1>Demo book shop</h1>
+        </div>
+        <div id="content" class="content">
+            <div id="overview" class="overview">
+            </div>
+            <div id="cart" class="cart">
+                <h2>Cart</h2>
+                <div class="cartBooks"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        © 2016, Christian Wasser
     </div>
 {% endblock %}

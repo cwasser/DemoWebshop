@@ -4,7 +4,7 @@ cwasser_book_shop_api_v1_books:
   prefix: /v1
 
 cwasser_book_shop_cart_order_books:
-  path: /cart
+  path: /v1/cart
   defaults: { _controller: CwasserBookShopBundle:Cart:order}
   methods: [POST]
   requirements:
