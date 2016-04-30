@@ -37,8 +37,8 @@ module.exports = (function($){
                 {
                     isResource : true,
                     httpMethod : 'GET',
-                    shouldTriggerStateUpdate : false,
-                    useHistoryStateFallback : false
+                    shouldTriggerStateUpdate : true,
+                    useHistoryStateFallback : true
                 }
             )
         }
