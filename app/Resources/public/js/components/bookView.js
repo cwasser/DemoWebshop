@@ -40,7 +40,7 @@ module.exports = (function($){
                     shouldTriggerStateUpdate : true,
                     useHistoryStateFallback : true
                 }
-            )
+            );
         }
         if (!$.spa.hasRoute(bookRoute, 'PUT')){
             $.spa.addRoute(
