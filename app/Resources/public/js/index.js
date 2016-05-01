@@ -4,7 +4,7 @@
     'use strict';
 window.jQuery = require('jquery');
 window.$ = window.jQuery;
-require('../../../../node_modules/jquery.spa/src/spa.js');
+require('../../../../node_modules/jquery.spa/src/jquery.spa.js');
 
 
 $(function(){

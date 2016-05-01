@@ -1,7 +1,7 @@
 /**
  * Created by cwasser on 26.04.16.
  */
-require('../../../../../node_modules/jquery.spa/src/spa.js');
+require('../../../../../node_modules/jquery.spa/src/jquery.spa.js');
 
 module.exports = (function($){
     'use strict';
