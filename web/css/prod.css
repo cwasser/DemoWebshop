@@ -290,7 +290,7 @@ html, body {
 }
 
 .book-details__information__value {
-    width: 120px;
+    width: 360px;
     float:left;
     padding: 5px;
 }
