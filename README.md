@@ -17,8 +17,7 @@ The demo shop is currently build for providing REST operations for an book entit
 Well the main priority of this project is showing the functionality of my bachelor thesis, which is 
 in detail a jQuery plugin which provides simple SPA functionality, so that its easy to SPAlify your application.
 
-This project shows the usage of the jquery.spa.js plugin with providing an RESTful API and delivering all templates in 
-a single template, so all resources are loaded during the first request to this application.
+This project shows the usage of the jquery.spa.js plugin with providing an RESTful API and creating an web UI for the book entities with the usage of the jQuery SPA Plugin..
 
 # Whats inside?
 
@@ -37,7 +36,9 @@ This project rely on the following dependencies for the client side:
 # Where to find the SPA plugin for jQuery
 
 For checking out my SPA plugin for jQuery, you can check my profile and take a look at the jquery-spa repository.
-It is available on https://github.com/cwasser/jquery-spa 
+It is available on https://github.com/cwasser/jquery-spa.
+Since this plugin is currently not available as an NPM package nor directly downloadable in the jQuery plugin repository,
+you need to checkout the git repository of this plugin first and then link it locally to the npm modules of the demo webshop.
 
 # How to contribute?
 
@@ -60,11 +61,30 @@ app/console doctrine:schema:validate
 app/console doctrine:schema:update --force
 ```
 
+As described above, you have to checkout the jQuery SPA plugin. So create a new folder on your disk for this plugin.
+Within this folder you should clone the SPA plugin:
+```
+cd /your/spa-plugin/folder
+git clone https://github.com/cwasser/jquery-spa
+npm link
+```
+This code will then link your SPA plugin checkout to a global link for npm on you file system. Then you should navigate
+to the DemoWebshop checkout and run the following code:
+```
+cd /your/demo-webshop/folder
+npm link [your-spa-plugin-link-name]
+```
+With this code you will link the npm package of the jQuery SPA plugin into the `npm_modules` of the demo webshop.
+
+You code should be now ready to build the client side assets.
 For building the client side assets (JS, templates and CSS), run the following:
 ```
-npm install
-gulp
+gulp clean
+gulp build
 ```
+
+After the building the application should be ready to run. So start the application within the demo webshop with
+`php app/console server:run` and navigate your browser to the address in this command, usually this should be `localhost:8000/`.
 
 # Directory index
 Description of the directory folders.
@@ -76,8 +96,11 @@ Application related configuration
 ## app/Resources/public/js/
 Javascript source files for the demo web shop
 
-## app/Resources/public/css/
+## web/css/
 CSS sources for the demo web shop
+
+## web/js/
+The built javascript production file is within this folder (`prod.js`)
 
 ## src/Cwasser/BookShopBundle/
 Source folder for the demo_shop bundle, which contains the API and Domain Logic.
